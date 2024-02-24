@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro Display", sans-serif;
+    line-height: 24px;
+    letter-spacing: 1px;
+} 
+
+/* centers its child and constraints it to 1320px-wide */
+.container {
+    max-width: 1296px;
+    padding: 0 12px 0 12px;
+    margin: auto;
+}
+.center {
+    width: max-content;
+    margin: auto;
+}
+.text-center { 
+    text-align: center; 
+}
+.text-right { 
+    text-align: right;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-equal-size {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.text-white 
+{
+     color: white;
+}
+.padding-h-10 {
+    padding: 0px 10px;
+}
+
+.margin-v-70 {
+    margin: 70px auto;
+}
+.margin-t-12 {
+    margin-top: 12px;
+}
+#play-button {
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+#history {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+body {
+    background-color: antiquewhite;
+}

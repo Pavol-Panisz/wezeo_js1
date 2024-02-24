@@ -11,6 +11,7 @@ let userPoints = 0;
 let pcPoints = 0;
 
 let matchResults = [];
+let matchResultStr = "History<br>";
 
 function onClickPlay() 
 {
@@ -43,22 +44,29 @@ function onClickPlay()
     // record the match result in an array
     result = {whoWon, pcInput, userInput};
     matchResults.push(result);
-    console.log(matchResults);
+    // console.log(matchResults);
+    matchResultStr += "winner: " + whoWon + " | pc: " + pcInput + " | user: " + userInput + "<br>";
+    document.getElementById("history-text").innerHTML = matchResultStr;
 
     if (whoWon == "user")
     {
         userPoints++;
+        document.getElementById("user-point-display").innerHTML = userPoints;
         alert(`Vyhral/a si!\n\n(Ty: ${inputToWordMap.get(userInput)} | Počítač: ${inputToWordMap.get(pcInput)})`);
     }
     else if (whoWon == "pc")
     {
         pcPoints++;
+        document.getElementById("pc-point-display").innerHTML = pcPoints;
         alert(`Prehral/a si!\n\n(Ty: ${inputToWordMap.get(userInput)} | Počítač: ${inputToWordMap.get(pcInput)})`);
     }
     else 
     {
         alert(`Remíza!\n\n(Ty: ${inputToWordMap.get(userInput)} | Počítač: ${inputToWordMap.get(pcInput)})`);
     }
+
+    // after the game is done, change the button text
+    document.getElementById("play-button").innerHTML = "Hrať znova";
 }
 
 function getUserInput()

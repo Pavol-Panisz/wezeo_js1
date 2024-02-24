@@ -3,19 +3,55 @@
     <head>
         <title>Kamen Papier Noznice</title>
         <script src="game.js"></script> 
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Kameň, Papier, Nožnice</h1>
-        <div>
-            <h2>Pravidlá</h2>
-            <ul>
-                <li>Kameň porazí nožnice</li>
-                <li>Nožnice porazia papier</li>
-                <li>Papier porazí kameň</li>
-            </ul> 
+        <div class="container center">
+            <h1 class="margin-v-70">Kameň, Papier, Nožnice</h1>
+            <div class="center text-center">
+                <h2>Pravidlá</h2>
+                
+                <div class="margin-t-12">
+                    Kameň porazí nožnice<br>
+                    Nožnice porazia papier<br>
+                    Papier porazí kameň
+                </div>
+
+            </div>
+            <div class="center margin-v-70">
+                <button id="play-button" type="button" onclick="onClickPlay()">
+                    Hrať
+                </button>
+            </div>
+
+            <!-- score display -->
+            <div class="margin-v-70">
+
+                <h2 class="center">Skóre</h2>
+
+                <div class="flex-row margin-t-12">
+                    <div class="flex-equal-size text-right">TY</div>
+                    <div class="text-center text-white padding-h-10">:</div>
+                    <div class="flex-equal-size">PC</div>
+                </div>
+                <div class="flex-row">
+                    <div id="user-point-display" class="flex-equal-size text-right">0</div>
+                    <div class="text-center padding-h-10">:</div>
+                    <div id="pc-point-display" class="flex-equal-size">0</div>
+                </div>
+            </div>
+
+        </div>  
+
+         <!-- history display -->
+         <div id="history">
+            <div>
+                <!-- "History" will go here -->
+                <div id="history-text">
+                    <!-- here goes the history text -->
+                </div>
+            </div>
         </div>
-        <button type="button" onclick="onClickPlay()">
-            Hrať
-        </button>
+
     </body>
 </html>
