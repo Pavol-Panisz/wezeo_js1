@@ -52,12 +52,12 @@
 #history {
     position: absolute;
     bottom: 0px;
-    right: 10px;
+    right: 0px;
 }
 #history-text {
     overflow: auto;
     max-height: 300px;
-    width: 250px;
+    width: 280px;
 }
 body {
     background-color: rgb(244, 238, 231);
